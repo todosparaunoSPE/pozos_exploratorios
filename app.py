@@ -17,6 +17,12 @@ import os
 from scipy.spatial import ConvexHull
 from fpdf import FPDF
 
+
+# Configuración de la página
+st.set_page_config(page_title="Análisis de Pozos Exploratorios - SENER", layout="wide")
+st.title("🔍 SENER: Dashboard de Análisis de Pozos Exploratorios")
+
+
 # Estilo de fondo
 page_bg_img = """
 <style>
@@ -33,11 +39,6 @@ background-size:16px 16px;
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-
-
-# Configuración de la página
-st.set_page_config(page_title="Análisis de Pozos Exploratorios - SENER", layout="wide")
-st.title("🔍 SENER: Dashboard de Análisis de Pozos Exploratorios")
 
 # 1. Carga automática del archivo Excel
 ARCHIVO_EXCEL = "nombre-de-los-pozos-exploratorios.xlsx"
